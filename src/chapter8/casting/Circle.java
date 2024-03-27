@@ -8,7 +8,7 @@ public class Circle extends Shape {
 	void draw() {
 		System.out.println("draw Circle");
 	}
-	void Circle() {
+	void circle() {
 		System.out.println("원입니다.");
 	}
 	
@@ -16,3 +16,4 @@ public class Circle extends Shape {
 		super.draw(); // 부모의 draw() 메서드를 호출
 	}
 }
+

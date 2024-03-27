@@ -16,10 +16,17 @@ public class ShapeTest {
 		//(Shape)를 생략해서 썼다고 하여 묵시적 형변환.
 		shape1.draw(); // draw Circle
 		
-		// 다운캐스팅, 명시적 형변환
-		// 자식클래스 변수 = (자식클래스) 부모객체;
-		Circle c1 = (Circle) shape1;
-		c1.method1();
-
+		if(shape1 instanceof Circle) {
+			// 다운캐스팅, 명시적 형변환
+			// 자식클래스 변수 = (자식클래스) 부모객체;
+			Circle c1 = (Circle) shape1;
+			c1.method1();
+			//shape1.method1()은 호출이 안됨.
+			//꼭 자식객체로 형변환하여 호출이 되도록 설계
+		}
+		//Triangle c1 = (Triangle)shape1;해도
+		//오류가 안나는데 나중에 문제가 생김. 그러니 실수하지 않도록
+		//instanceof(객체타입확인)를 써서 확실히 하는 것임.
 	}
 }
+
