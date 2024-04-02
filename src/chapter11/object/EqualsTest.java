@@ -50,6 +50,11 @@ public class EqualsTest {
 		
 		System.out.println(st3);
 		
+		// st1객체와 st3객체의 주소는 다름. 고로 다른 객체
+		// 객체가 동일한지 비교될 때 내부적으로 Object클래스의 equals()와 hashCode()가 사용됨.
+		// 100, "손흥민"은 데이터가 같다면 동일한 객체로 인식되도록 하자.
+		// 그럴려면, Object클래스의 equals()와 hashCode()를 재정의해야 동일한 객체로 만들 수 있음.
+		
 		// 주소비교
 		if(st1 == st2) {
 			System.out.println("st1과 st2는 주소가 같습니다.");
