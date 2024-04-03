@@ -1,6 +1,6 @@
 package chapter14.collection;
 
-public class Member2 {
+public class Member2 implements Comparable<Member2> {
 	private int memberId;
 	private String memberName;
 	
@@ -50,5 +50,20 @@ public class Member2 {
 				return false;
 		}
 		return super.equals(obj);
+	}
+
+	// 객체가 대소비교에 사용되는 추상메서드 구현용도
+//	@Override
+//	public int compare(Member2 o1, Member2 o2) {
+//		// Member2 클래스를 대소비교할 때 기준을 잡아야 한다.
+//		// memberID를 대소비교 대상으로 기준을 잡음.
+//		System.out.println("compare호출 확인용도");
+//		return o1.getMemberId() - o2.getMemberId();
+//	}
+
+	@Override
+	public int compareTo(Member2 member) {
+		System.out.println("compare호출 확인용도");
+		return (this.memberId - member.memberId);
 	}
 }
