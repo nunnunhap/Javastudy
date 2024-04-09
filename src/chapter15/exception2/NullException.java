@@ -1,4 +1,4 @@
-package chapter15.exception;
+package chapter15.exception2;
 
 class Person {
 	
